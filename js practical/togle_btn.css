@@ -1,0 +1,40 @@
+  /* ========= 576 to 768 media query ========= */
+
+  @media  (max-width: 768px){
+        
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* .nav .nav-f .toggle-btn{
+      display: block;
+    }   */
+  
+    .nav .nav-f .toggle-btn {
+        display: block;
+        position: relative;
+    }
+
+
+    .nav .nav-f .nav-menu {
+        display: none;  
+    }   
+
+    .menu-list-show {
+      position: absolute;
+      top: 0;
+      width: 30%;
+      height: auto;
+      background-color: red;
+      display: block;
+    }
+    .menu-list-show .menu-list{
+      display: block;
+      flex-direction: column;
+    }
+
+}
+   
+
+  

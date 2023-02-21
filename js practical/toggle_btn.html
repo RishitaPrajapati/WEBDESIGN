@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toggle button</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .nav {
+        background-color: pink;
+      }
+
+      .container {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .nav .nav-p {
+        padding: 20px;
+      }
+
+      .nav .nav-p .nav-f {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav .nav-f .toggle-btn {
+        display: none;
+      }
+
+      .nav .nav-f .toggle-btn .toggle {
+        background: transparent;
+        border: none;
+      }
+
+      .nav .nav-f .toggle-btn .fa-bars {
+        color: white;
+        font-size: large;
+      }
+
+      .nav .nav-f .nav-logo {
+        flex: 1;
+      }
+
+      .nav .nav-f .nav-logo a {
+        color: white;
+        font-family: math;
+      }
+
+      .nav .nav-f .nav-menu {
+        flex: 1;
+      }
+
+      .nav .nav-f .nav-menu .menu-list {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .nav .nav-f .nav-menu .menu-list li a {
+        color: white;
+        font-family: sans-serif;
+      }
+
+      /* ========= 576 to 768 media query =========  */
+
+      @media (max-width: 768px) {
+        .container {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+
+        .nav .nav-f .toggle-btn {
+          display: block;
+          position: relative;
+        }
+
+        .nav .nav-f .nav-menu {
+          display: none;
+        }
+
+        .nav .nav-f .menu_list_show {
+          display: flex;
+          width: 200px;
+          height: 300px;
+          background-color: rgb(147, 76, 88);
+          position: absolute;
+          top: 50px;
+          right: 0px;
+          justify-content: center;
+        }
+        .nav .nav-f .menu_list_show .menu-list {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="container">
+        <div class="nav-p">
+          <div class="nav-f">
+            <div class="nav-logo">
+              <h1><a href="">RISI</a></h1>
+            </div>
+            <div class="nav-menu">
+              <ul class="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About-Us</a></li>
+                <li><a href="">Contact-Us</a></li>
+                <li><a href="">Help</a></li>
+              </ul>
+            </div>
+            <div class="toggle-btn">
+              <button class="toggle">
+                <span class="fa-solid fa-bars"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let togglebtn = document.querySelector(".toggle");
+      let navmenu = document.querySelector(".nav-menu");
+      let cancelbtn = document.querySelector(".cancel-btn");
+
+      togglebtn.addEventListener("click", function () {
+        navmenu.classList.toggle("menu_list_show");
+      });
+
+      // btn.addEventListener("click", function () {
+      //   btn.classList.remove("menu_list_show");
+      // });
+    </script>
+  </body>
+</html>

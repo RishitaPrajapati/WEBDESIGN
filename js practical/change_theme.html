@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>change theme</title>
+    <style>
+      .change-mode {
+        background-color: yellow;
+      }
+
+      .change-color {
+        background-color: lightpink;
+      }
+
+      h1 {
+        color: black;
+        font-size: 50px;
+        font-family: sans-serif;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="fa-solid fa-moon"></span>
+    <br />
+    <img src="img1.jpg" alt="" class="img1" />
+    <h1>RISI</h1>
+
+    <script>
+      let icon = document.querySelector(".fa-moon");
+
+      icon.addEventListener("click", function () {
+        document.body.classList.toggle("change-mode");
+
+        if (document.body.classList.contains("change-mode")) {
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        } else {
+          icon.classList.add("fa-moon");
+          icon.classList.remove("fa-sun");
+        }
+      });
+
+      let img1 = document.querySelector(".img1");
+
+      img1.addEventListener("click", function () {
+        document.body.classList.toggle("change-color");
+
+        if (document.body.classList.contains("change-color")) {
+          img1.src = "img2.jpg";
+        } else {
+          img1.src = "img1.jpg";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+      }
+    </style>
+    <script>
+      function set_color() {
+        let clr = document.getElementById("clr").value;
+        let div1 = document.getElementById("changeclr");
+
+        div1.style.backgroundColor = clr;
+
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <label for="clr">Set Color : </label>
+      <input type="color" id="clr" />
+      <button onclick="return set_color()">Set Color</button>
+      <br />
+      <br />
+      <div id="changeclr">RISI</div>
+    </form>
+  </body>
+</html>
