@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>owl carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- owl carousel css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- owl carousel js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            576: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      h4,
+      h1 {
+        text-align: center;
+      }
+
+      .orange {
+        color: orange;
+        font-family: sans-serif;
+        padding: 15px 0px;
+      }
+
+      .test {
+        text-transform: capitalize;
+        font-family: sans-serif;
+        font-size: 30px;
+        padding-bottom: 30px;
+      }
+
+      .image {
+        width: 60px !important;
+        height: 60px;
+        border-radius: 50%;
+      }
+
+      .owl-carousel{
+        padding: 10px 30px;
+      }
+
+      .quote {
+        color: orange;
+        font-size: 30px;
+      }
+
+      .name-city {
+        padding: 13px 0px;
+      }
+
+      .det {
+        display: flex;
+        gap: 20px;
+      }
+
+      .slide-f {
+        display: flex;
+        gap: 20px;
+        padding: 25px 50px;
+      }
+
+      .slide {
+        padding: 20px;
+      }
+
+      .para {
+        font-family: sans-serif;
+        font-size: 15px;
+        padding: 20px 0px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4 class="orange">What our client say</h4>
+    <h1 class="test">testmonials</h1>
+    <div class="owl-carousel owl-theme">
+      <!-- <div class="slide-f"> -->
+      <div class="item">
+        <div class="slide">
+          <span class="fa-solid fa-quote-left quote"></span>
+          <p class="para">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+            consequatur tenetur vero modi, libero minima nam temporibus labore
+            doloremque fuga?
+          </p>
+          <div class="det">
+            <img src="grl.jpg" alt="" class="image" />
+            <div class="name-city">
+              <h3>Risi</h3>
+              <p>city</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="slide">
+          <span class="fa-solid fa-quote-left quote"></span>
+          <p class="para">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+            consequatur tenetur vero modi, libero minima nam temporibus labore
+            doloremque fuga?
+          </p>
+          <div class="det">
+            <img src="grl.jpg" alt="" class="image" />
+            <div class="name-city">
+              <h3>Risi</h3>
+              <p>city</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="slide">
+          <span class="fa-solid fa-quote-left quote"></span>
+          <p class="para">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+            consequatur tenetur vero modi, libero minima nam temporibus labore
+            doloremque fuga?
+          </p>
+          <div class="det">
+            <img src="grl.jpg" alt="" class="image" />
+            <div class="name-city">
+              <h3>Risi</h3>
+              <p>city</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </body>
+</html>
